@@ -1,0 +1,175 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,braket}
+\usepackage[hidelinks]{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage[margin=2cm]{geometry}
+\newcommand{\pin}{\par\noindent}
+\newcommand{\response}[1]{{\color{blue}\subsection*{Response:}{#1}\vspace*{10pt}}}
+%\renewcommand{\thesubsection}{Feedback from the referee:}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\newcommand{\point}[1]{\subsection{}{#1}}
+
+\title{\vspace*{-40pt}Referee response to NJP-115938}
+\author{Abhirup Mukherjee, N. S. Vidhyadhiraja, A. Taraphder, Siddhartha Lal}
+
+\begin{document}
+\maketitle
+
+\flushleft
+We thank all the referees for their feedback. These have helped substantially in improving the overall presentation of the manuscript. We now present our responses to the questions and comments below (in blue).
+
+\section*{Response to the board member's preliminary report}
+{\color{blue}
+	We have already responded earlier (in round 1) to the comments of the first board member. 
+}
+
+\section*{Response to Referee 2/ Board Member}
+1.~
+To be more specific, the Introduction section has a rather unusual format. The authors gave a long list of problems to address and a summary of the main results. However, it is unclear why these problems/results are important, particularly to general readers who are not in the field of DMFT or MIT. The rest of the paper is also written in a technical tone.
+
+\response{
+	We thank the board member for their feedback. In light of their comments, we now also explain in the manuscript why the questions we raised in the introduction are important, where they extend our ideas of correlated electrons, and how our work generates new understanding not accessible to the extant approaches.}
+
+\section*{Response to the Referee 3}
+1.~
+The RG flow in Fig 3 appears to have non-analyticities (kinks). Do these imply non-analytical behavior (as function of temperature?), or is this an artifact of the RG approach?
+
+\response{
+	We thank the referee for this question. We will first clarify the nature of RG flow of the Kondo coupling \(J\). As seen in Fig. 3 (central panel), the coupling increases sharply and reaches a fixed point at a certain value of the effective bandwidth, signalling a strong-coupling fixed point. As the Kondo coupling $J$ does not grow any further upon further passage towards the IR, the RG flow curve flattens out and the attainment of the strong coupling fixed point appears as a kink in the RG flow. We have, for instance, studied the RG flow towards such a strong-coupling fixed point in the single-channel Kondo model using the URG (see Ref.\cite{anirban_kondo}), and obtained excellent quantitative agreement with well-known numerical RG results while computing the susceptibility, Wilson ratio and several other quantities. More generally, within the URG formalism, a fixed point is reached when the quantum fluctuation scale \(\omega\) in the denominator becomes equal to the eigenvalue of the diagonal part of the Hamiltonian, and this can be shown to coincide with the vanishing of all quantum fluctuations for that value of \(\omega\)~\cite{anirbanurg1}. It is important to note that such RG flows do not yield kinks or discontinuous behaviour in any experimental observable~\cite{anirban_kondo}, and are therefore not indications of a phase transition.\\[10pt]
+\par
+With this in mind, we now turn to the RG flow of the single-particle hybridisation amplitude \(V\) (Fig.3 (left panel)). The RG equation for \(V\) contains multiple terms arising from two distinct scattering processes present within the Hamiltonian. The initial increase of \(V\) (starting from the UV) is due to relevant behaviour from the \(JV-\)scattering process (first set of terms in eq. (7)), while the \(VU_b-\)scattering process (second set of terms in eq. (7)) is less dominant. At a certain point along the RG flow, all the quantum fluctuations related to the \(JV-\)scattering process have been resolved. The other scattering process then takes over, leading to a sharp turn in the flow behaviour. We note that this two-step behaviour in the RG equation obtains important physics:
+at a critical value of the tuning parameter \(r = r_{c1}\), the second scattering process becomes sufficiently irrelevant so as to nullify the effect of the initial relevant part and drive the coupling to zero near the IR. This leads to the dips in the single-particle spectral function at non-zero values of $\omega$ (see Fig.4 (right panel)), finally isolating the central ``Kondo" peak from the two Hubbard sidebands via the formation of the pre-formed spectral gap visible for the parameter $r\geq r_{c1}$.
+}
+
+2.~
+	The authors claim an exited-state transition as function of $U_b$ where the Hubbard bands form (e.g. Fig 4b). I think Hubbard bands would be present even without $U_b$ if the model would have a smaller V. How does this fit into the authors' story?
+
+\response{
+	We thank the referee for their question. Indeed, the Hubbard sidebands would form even without the presence of \(U_b\), as the impurity onsite correlation \(U\) is increased (while keeping \(V\) fixed). That this is consistent with our results can be seen as follows: we have fixed the onsite correlation \(U\) to \(U = -10U_b\), such that as \(U_b\) is made increasingly negative, \(U\) also becomes large and positive. The large bare $U$ then leads to the irrelevance of $V$ deep in the IR regime, obtaining the excited state quantum phase transition at $r=r_{c1}$ (see also response to Q1. above).
+}
+
+3.~
+The hard gap separating the Hubbard bands from the central peak (Fig 4b, r=0.99 $r_c$) appears unphysical (because high-order scattering processes of the low-energy electrons inevitably fill this gap). This seems to be an artifact of approach.
+
+\response{
+We thank the referee for raising this point. The non-perturbative nature of the URG accounts for the single-particle scattering processes arising from the hybridisation $V$ to all orders. Similar non-perturbative URG relations for the couplings in other well-known models of strong electronic correlation (e.g., Hubbard model) have been obtained by us in several earlier works (and given as references in our manuscript). We find that the hard gap in the single-particle impurity-site spectral function of the e-SIAM appears from the RG-irrelevance of the coupling \(V\) at intermediate and low frequencies, along with the RG-relevance of the Kondo coupling \(J\) at low frequencies. We emphasise that all impurity-bath one-particle scattering processes are then observed to be suppressed under RG (i.e., in the absence of any relevant single-particle hybridisation coupling $V$ between the impurity and the bath) in and below intermediate frequencies, leading to the appearance of the spectral gap (see also the response to Q.1 and Q.2 above). Indeed, we find that the disappearance of all impurity-bath scattering processes is the first step towards the local transition at the impurity, and is followed by the gapping out of the zero frequency two-particle spin-flip scattering processes through the irrelevance of \(J\).
+}
+
+4.~
+In Sec. 6.1 the authors say "the singlet is no longer an eigenstate of the quantum mechanical spectrum". I do not understand this sentence. An "eigenstate" should be an eigenstate of an operator. I think the original Hamiltonian has no simple singlet eigenstate, so what is meant here? 
+
+\response{
+We thank the referee for their comment and question. In the statement quoted, we mean that the singlet is no longer an eigenstate of the zero bandwidth limit of the RG fixed point effective Hamiltonian. This ground-state is shown in Table 1 of the manuscript. In the presence of the full set of conduction electrons, the singlet is replaced by a state where the impurity entangles with all the electrons within the fixed point Hamiltonian describing the IR theory; this state can be obtained by solving the complete fixed point Hamiltonian. However, such a state is, to a very good approximation, equivalent to the zero bandwidth singlet state as the relevant Kondo coupling \(J\) makes the effect of the kinetic energies negligible in the ground state. As a result, our statement holds equally well for the ``macroscopic singlet" state of the complete fixed point effective Hamiltonian.
+}
+
+5.~
+	Similarly, I do not understand what "leads to the exclusion of the charge states from the ground state" could mean. Is this a sharp statement about exact (or approximate?) wavefunctions? If yes, these wavefunctions should be explicitly shown.
+
+\response{
+	We thank the referee for their question. The phrase quoted by the referee refers to the following phenomenon. As the coupling \(V\) becomes irrelevant beyond the point \(r_{c1}\) (see also our response to Q.1 and Q.2 above) and only the Kondo coupling \(J\) remains, single-particle scattering processes on the impurity site are suppressed at low energies. This effectively projects out the charge states on the impurity, and leaves behind only a spin-1/2 degree of freedom. Indeed, as requested by the referee, this projection can be seen very simply by comparing the ground states of Regimes 1 and 2 in Table 1 of the manuscript.
+}
+
+6.~
+Related: Further down, the authors say that "at $r_c1$ [...] the coupling V becomes irrelevant [...] so that the coefficient vanishes beyond that point." Do the authors refer to irrelevance in the common RG sense? if yes, this seems to imply an incorrect notion of irrelevance: being irrelevant does not mean having no effect, but only not destabilizing a particular fixed point. Hence, I believe that some coefficient vanishing cannot be an exact statement. If this statement is not exact, then the reader is left wondering what it means at all.
+
+\response{
+	We thank the referee for their comment. Indeed, we are using the term irrelevance in the standard RG sense. As the coupling \(V\) is irrelevant in a certain regime \((r > r_{c1}\)) of the model, it vanishes from the Hamiltonian at low energy scales for the case of system containing a thermodynamically large conduction bath. As a result, coefficients that depend on the coupling \(V\) will also vanish at the same energy scales. However, coefficients that appear at UV scales will survive, because they are determined by the UV coupling (which is non zero). Both of these aspects are clarified in Section 6.1 of the manuscript.
+}
+
+7.~
+In Sec. 6.3 the authors claim that the model has a finite-temperature first-order phase transition. I think this is wrong, essentially because an impurity model cannot have a phase transition at finite T as a matter of principle. One argument for this is that, after formally integrating out the infinite bath, the effective model is described by an action in 0+1 dimensions. At finite T, its system size is finite (given by beta=1/T), and thermodynamic phase transitions in finite systems do not exist. In the presence of a first-order transition at T=0, the correct result for the quantum impurity model instead is that it is in a thermodynamic mixture of both phases. This has been studied for instance in the context of the Kondo model in a superconducting (or hard-gapped) host, which does show a first-order transition at T=0, see e.g. J. Phys. Soc. Jpn. 61, 3443 (1992) and Phys Rev B 57, 5225 (1998).
+I believe the authors' incorrect claim is based on the notion that, in the thermodynamic limit of the bath, only one of the phases effectively contributes to the partition function. This is incorrect because the two energies associated with the two phases only differ by a piece of order unity (not bath size). In the Hubbard-model DMFT solution, the first-order transition at finite T is a result of self-consistency. Given that the present impurity model has no finite-T phase transition, there are much less similarities to the Hubbard model than claimed by the authors.
+
+\response{
+We are grateful to the referee for raising this point. The first-order transition that we talk about in section 6.3 is in fact not for the impurity model. The key idea behind DMFT is that for the half-filled Hubbard model in infinite dimensions, the local dynamics of any given site is described by an effective impurity model with the impurity placed on that site and that all such impurity models are effectively independent of one another. Our extended SIAM (eSIAM) approximately describes the local physics of one such effective impurity. The bulk partition function then accounts for the physics of $N$ such independent impurity models (where $N$ is the number of sites on the lattice) that are identical to one another (due to translation invariance). It is this bulk partition function that we have focussed on in Section 6.3, and we have updated the manuscript to clarify this point.
+}
+
+8.~
+I believe that the parameter J is not needed in the original model, as this coupling will be generated.
+
+\response{
+	We thank the referee for this comment. The coupling \(J\) will be generated upon RG transformations that integrate out charge degrees of freedom on the {\it impurity site} in one step (i.e., transformations that are equivalent to the Schrieffer-Wolff transformation). The approach employed by us involves, instead, a gradual integrating out of the {\it conduction electron states} from UV to IR, obtaining thereby a low-energy effective Hamiltonian at the end. Due to this difference, the coupling \(J\) will not be generated automatically in our calculation. Thus, in order to track the effects of two-particle spin-flip scattering processes between the impurity and bath electrons, we find it pragmatic to keep an explicit Kondo coupling in the UV model.
+}
+
+9.~
+I was missing the value of V which has been used to generate the quantitative plots in the paper.
+
+\response{
+We thank the referee for their feedback. We have used the bare value \(V=J\) while generating the plots. We have now updated the beginning of Section 4 in the manuscript with this information.
+}
+
+10.~
+The model can be simulated with high accuracy using either quantum Monte Carlo or numerical renormalization group methods. The authors did not attempt this, but I feel this would be required to substantiate (or actually falsify, see above) some of their claims.
+
+\response{
+We thank the referee for this comment. We believe that studies of our model involving the QMC or NRG methods are big endeavours in their own right. Given the depth of our present analysis, we believe that such extensive studies should be kept for a future work, and request the referee's understanding on this. However, we would like to point out that in some previous works that involve a URG analysis of the single channel and multichannel Kondo models (Refs.~\cite{anirban_kondo} and ~\cite{Patra_2023}), we have benchmarked our results for quantities like the Wilson ratio, impurity susceptibility, critical exponents, etc. with existing results obtained from various other methods.
+}
+
+\section*{Response to Referee 4}
+1.~
+As the phenomenological model, the authors added two additional elements: the impurity-bath spin exchange term and the local attractive bath correlation. Then, according to the URG which the authors adopted in Sec. 2.2, the growing of the spin exchange coefficient J [see Eq. (8)] is possible only when it is present initially. So, it implies that without adding this term by hand initially, there is no spin-exchange coupling after the renormalization and no Kondo state. (In this regard, this RG does not look like reducing to the poor man’s scaling.)
+
+\response{
+We thank the referee for this question. With regards to the last point in parenthesis, our RG equations do indeed reduce to their ``Poor Man's" scaling counterparts upon taking the appropriate weak-coupling limit. For example, the RG equation for \(V\) and \(U\) reduce to the corresponding equations shown in the work by Haldane on the single impurity Anderson model (or, SIAM; Ref.~\cite{haldane1978scaling}) upon setting \(\omega = -D/2\) and \(J = U_b = 0\), and the RG equation for \(J\) reduces to that obtained by Anderson for the Kondo model (Ref.~\cite{anderson1970}) upon setting \(\omega = -D/2\) and \(J \ll D\). 
+}
+
+2.~
+However, as shown in Eq. (17), this spin-exchange term naturally arises after the Schrieffer-Wolff transformation, which is another type of the unitary transformation. So, my question is, why is the URG unable to capture this naturally arising spin-exchange coupling? Or, why should the author add this term by hand initially even when this exchange should appear due to the impurity-bath hybridization?
+In fact, to me, the addition of the spin-exchange coupling looks like double counting or overestimation of the spin-exchange coupling. I hope that the authors resolve this question.
+
+\response{
+We thank the referee for raising this point. 
+%The coupling \(J\) will be generated upon RG transformations that integrate out the {\it impurity}, in one step. 
+The coupling \(J\) will be generated upon RG transformations that integrate out charge degrees of freedom on the {\it impurity site}. This can be carried out through either a Schrieffer-Wolff transformation or a single step URG transformation. The approach employed in our manuscript is, however, different. Instead of obtaining an effective Hamiltonian in one step, the URG transformations applied by us gradually integrate out the {\it conduction electron states} from UV to IR, obtaining a low-energy effective Hamiltonian at the end. Due to this difference, the coupling \(J\) will not be generated automatically under the URG. Thus, in order to track the effects of two-particle spin-flip scattering processes between the impurity and bath electrons, we find it pragmatic to keep an explicit Kondo coupling in the UV model.
+}
+
+3.~
+In Eq. (16), should the operators O1 and O2 be replaced by the corresponding spin operators?
+
+\response{
+We thank the referee for pointing this out. Yes, the operators \(O_1\) and \(O_2\) are from the general expression, and they should be replaced by the corresponding spin operators in that more specific expression. We have now rectified this in the manuscript.
+}
+
+\section*{Response to Referee 5}
+1.~The important character of the Mott metal-insulator transition is the double occupation, which is completely suppressed in the insulating phase at zero temperature.  The present manuscript didn't analyze the double occupation across the metal-insulator transition. It would be valuable if the authors could provide an analysis of the double occupation across the metal-insulator transition. Otherwise, how do the authors identify the insulating phase as the Mott one?
+
+\response{
+We thank the referee for their question. We were indeed identifying the insulating phase as that of the Mott kind through the expulsion of the doubly-occupied states. We have provided arguments for this in various phases. We have now also computed the double occupancy on the impurity site and added that to the manuscript (black curve in left panel of Fig. 4. The double occupancy is zero in the local moment phase, displaying the fact that the latter is a local Mott insulator.
+}
+
+2.~In the single impurity model, proposed by the authors, the local Coulomb interaction of conduction electrons is attractive ($U_b<0$), and perhaps this attractive interaction is mandatory to obtain the metal-insulator transition. However, it is not clear the mapping between the lattice Hubbard model and the single impurity model with correlated bath with attractive local interaction within the DMFT. Could the authors clarify or discuss this point in more details?
+
+\response{
+	We thank the referee for their feedback. Within the eSIAM Hamiltonian, the \(U_b-\)term plays the role of effective charge fluctuations in the vicinity of any particular local site in the Hubbard model. In the large \(U-\)regime of the Hubbard model, we expect electron delocalisation to occur through correlated spin-flips. However, as the system parameters approach \(r_{c2}\), the local degrees of freedom acquire self-energy corrections that make these spin-flips extremely difficult. We have modelled the effect of such self-energy corrections within the impurity-bath model in the form of an attractive \(U_b-\)term for electrons on the bath site hybridised with the impurity. In short, our understanding is that the correlation and hybridisation parameters in a bulk model like the Hubbard model conspire to generate an effective bath correlation term \(U_b\) within a local description (as relevant to DMFT). We conclude by mentioning that similar effective attraction terms have been observed very recently within a theoretical analysis of the Hubbard model~\cite{gazizovaleblanc2023}. For the sake of completeness, we have now mentioned this in the Conclusions section of our manuscript.
+}
+
+3.~In addition, when the local interaction of conduction electrons is attractive, the Cooper pair of conduction electrons may be formed at the single site. At least in the violet region $r>r_{c2}$, one may expect a local Cooper pair of conduction electrons. Could the authors clarify this point?
+
+\response{
+We thank the referee for their question. While there is no true destabilisation of the bath in eSIAM (the phase transition is purely on the impurity) due to the inclusion of the attraction at only one site of the bath, %(this excludes the condensation of Cooper pairs is not possible as a matter of principle, 
+we do find a growth in the pairing fluctuations between the bath site with the \(U_b\)- term and its neighbouring sites (left panel in Fig. 5), in the local moment phase (violet region of the phase diagram shown in Fig. 2). The emergence of these pairing fluctuations appear to be suggesting a putative tendency towards formation of Cooper pairs.
+%; their condensation will require additional physics.
+}
+
+4.~Could the authors present some discussion of preliminary phases for the case of repulsion $U_b>0$?  The readers would be interested in it.
+
+\response{
+We thank the referee for their comment. The case of the repulsive \(U_b\) (\(U_b > 0\)) is more straightforward. There is no Kondo breakdown at finite \(J\) in this scenario. In fact, such a repulsive term enforces the RG-relevant nature of the Kondo coupling and should lead to an increase in the Kondo temperature. The case of \(U_b > 0\) can thus be said to be adiabatically connected to the case of \(U_b = 0\). We have added this discussion to the manuscript in the form of Section 3.4.
+}
+
+
+\section*{Response to the Referee 6/board member 2}
+\response{We thank the Referee for the confidence shown in our work, and the opportunity to respond to various queries from the other referees.}
+
+\section*{Additional changes in the manuscript}
+\begin{itemize}
+	\item We have rectified a typographic error in Eq.(21) of our manuscript.
+	\item We removed some duplicate references and updated a preprint reference to its published version.
+\end{itemize}
+
+
+
+\bibliographystyle{unsrt}
+\bibliography{esiam-manuscript}
+\end{document}

@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,braket}
+\usepackage[hidelinks]{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage[margin=2cm]{geometry}
+\newcommand{\pin}{\par\noindent}
+\newcommand{\response}[1]{{\color{blue}\subsection*{Response:}{#1}\vspace*{10pt}}}
+%\renewcommand{\thesubsection}{Feedback from the referee:}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\newcommand{\point}[1]{\subsection{}{#1}}
+
+\title{\vspace*{-40pt}Referee response to NJP-115938.R1}
+\author{Abhirup Mukherjee, N. S. Vidhyadhiraja, A. Taraphder, Siddhartha Lal}
+
+\begin{document}
+\maketitle
+
+\flushleft
+We thank the third and fourth referees and the board member for their comments and feedback. We now present our responses to the questions and comments below (in blue).
+
+\section*{Response to Referee 4}
+I think that all the questions and comments are well answered and properly incorporated into the updated manuscript, while the Introduction is still not so friendly to general readers. Hence I recommend the publication of this manuscript in New Journal of Physics.
+
+\response{
+	We thank the referee for their understanding and for recommending the publication of our manuscript.
+}
+
+\section*{Response to Referee 3}
+1.~Most importantly, the issue of the finite-T transition (point 7 of my initial report) remains highly misleading. Although the authors admit in their response that the single-impurity model does not have such a transition, Fig 10 of the revised paper still represents a phase diagram with a first-order line which - according to the caption - is the phase diagram of the "J-Ub model", i.e., the single-impurity model. The authors also left the text surrounding Eq (26-28) unchanged - this is the text discussing the claimed first-order transition. This piece of the paper is incorrect, as I pointed out earlier.
+
+\response{
+We thank the referee for their comments. As we firmly believe that we have explained in our previous response the meaning of the phase transition arising from our impurity model (in terms of the bulk self-consistent model that is arrived at via DMFT), it is clear that we have reached an impasse. However, we are in favour or removing subsection 6.3 altogether from our manuscript, as it is not central to the thesis of our work. Since this is the subsection that contains all the discussions on the finite temperature transition (including Fig 10 and eqs. 26-28), we believe that this should take care of the referee's objections. We stress that the rest of our results stand independent of this subsection, since the other results apply only at zero temperature.
+}
+
+2.~I maintain that the hard gap separating the Hubbard gap from the low-energy states in the spectrum is unphysical (point 3 of my initial report), because high-order perturbation theory will generate processes filling the gap. In their reply, the authors refer to the "irrelevance" of some coupling. This appears to be a similar misinterpretation of "irrelevance" as I adressed in point 6 of my report. I repeat that "irrelevance" in the RG sense does not mean that a coupling has no effect (and this is *not* a question of energy scales, as the authors' reply to point 6 erroneously suggests). Instead, "irrelevance" means that a fixed point is not destabilized.
+
+\response{
+	We thank the referee for their point. We agree with the referee that an irrelevant coupling cannot destabilise a fixed point of the RG flow. Further, we agree that the physical consequences of an irrelevant hybridisation \(V\) can be accounted for in many-body perturbation theory, leading to ``in-gap" processes within the optical gap of the impurity spectral function (as discussed by Nozieres in Ref.\cite{nozieres_dmft}). Our impurity spectral function (Fig. 4) is computed from the effective Hamiltonians (given in Table 1) obtained from the RG flow for a quantum impurity-bath system with a thermodynamically large conduction bath, and do not contain the effects of the irrelevant hyrbidisation $V$. We believe that ``in-gap" contributions can be accounted for systematically from a subsequent many-body perturbation treatment of $V$. However, we expect that such contributions will be small, and cannot fill in the optical gap completely. We have included a few lines on this point in our discussion of the impurity spectral function (page 8).
+}
+
+3.~For the record, I also note that I am unhappy with the authors' response to points 1,4,5 in my initial report. In my opinion, the paper suffers from an over-interpretation of the results of the authors' RG approach.
+
+\response{
+Unfortunately, we have nothing more to add in this regard, and request the referee's understanding in this matter.
+}
+
+\section*{Response to the Board Member}
+Specifically, he/she claims that  the issue of the finite-T transition (point 7 of his/her initial report) remains highly misleading.  Also, the hard gap separating the Hubbard gap from the low-energy states in the spectrum is claimed to be unphysical (point 3 of my initial report). This points should be reconsidered by the authors before acceptations.
+
+\response{
+	We thank the board member for their comments. In order to address the finite temperature transition issue raised by the third referee, we have opted to remove altogether the relevant subsection of our manuscript. While we believe that we have already explained the meaning of the phase transition arising from our impurity model in our previous response (in terms of the bulk self-consistent model that is arrived at via DMFT), we feel that this is the most expedient way of resolving the issue as it does not affect any of the other results.
+\par\noindent
+We have also addressed the comments of the third referee regarding the hard gap. We agree that a many-body perturbation-theoretic treatment of an irrelevant hybridisation $V$ can lead to ``in-gap" contributions of spectral weight within the optical gap of the impurity spectral function. Our present computations of the impurity spectral function do not take into account the effects of such an irrelevant coupling. However, we expect that such contributions will be small, and cannot fill in the optical gap completely. We have included a few lines on this point in our discussion of the impurity spectral function (page 8), and believe that this resolves the matter. 
+}
+
+\section*{Additional changes in the manuscript}
+\begin{itemize}
+	\item We have removed all references to the finite temperature first order transition in the manuscript, in accordance with our response to the first point of Referee 3.
+	\item In relation to our response to the second point of Referee 3, we have added a statement on the ``in-gap" processes present in the optical gap in Section 4 of the manuscript.
+\end{itemize}
+
+\bibliographystyle{unsrt}
+\bibliography{response.bib}
+\end{document}

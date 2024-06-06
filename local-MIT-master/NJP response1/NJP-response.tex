@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{braket,amsmath,color,graphicx,cite}
+\usepackage[margin=1cm,bottom=1.5cm]{geometry}
+\usepackage[colorlinks,linkcolor={blue},citecolor={blue}]{hyperref}
+\bibliographystyle{unsrt}
+\allowdisplaybreaks
+\begin{document}
+
+\title{Response to NJP}
+
+\author{Abhirup Mukherjee, N. S. Vidhyadhiraja, A. Taraphder and Siddhartha Lal}
+
+\date{\today}
+\maketitle
+
+The preliminary report states that the Mott-Hubbard metal-insulator transition is a well-studied topic, and that our work does not provide much new insight about it. There is, however, reasons to believe that important features regarding the transition remain opaque and ill-understood. Below we provide some evidence for that, and mention briefly how our work provides new insight on these features.
+
+Recent studies of the crossover region above the second order critical point in the DMFT phase diagram have revealed quantum critical scaling signatures in transport measurements~\cite{terletska_mott_2011,vucicevic_2013}. Such signatures have also been detected in measurements on organic materials in the crossover region~\cite{Kagawa2005,Furukawa2015}, as well as along the first order spinodal lines~\cite{satyaki_2020_PRL}. Another work from 2020 has shown that the Mott MIT of the infinite-dimensional Hubbard model involves a topological transition that proceeds through the dissociation of domain walls in a fictitious Su-Schrieffer-Heeger chain connected to the physical lattice sites~\cite{sen_mitchell_2020}.
+
+Given this recent activity, several interesting questions remain to be answered with regards to the DMFT description of the Mott MIT on the Bethe lattice, which we have addressed in our work:
+\begin{itemize}
+	\item {\it What is the origin of the quantum critical fluctuations observed above the second order transition critical point? Can this explain the above-mentioned observation of critical signatures near the spinodals as well?}
+\par
+Our renormalisation group analysis of an extended Anderson impurity model makes clear that the Mott MIT takes place through transitions - an excited state quantum phase transition (ESQPT) followed by a quantum critical point (QCP). We have demonstrated the presence of long-ranged 1-particle and 2-particle correlations and entanglement measures in the neighbourhood of both the ESQPT and the QCP, signifying the critical nature of these point. We have also argued that at finite temperatures, the ESQPT and the QCP extend into the first-order spinodal lines, thus providing a likely explanation for the observation of critical scaling behaviour along the spinodals as well as above the second order point.
+\item
+	{\it Can the topological nature of the transition be explained without resort to a fictitious SSH chain? What effect does this have on the gapless excitations at the transition?}
+\par
+The impurity phase transition in our extended Anderson impurity model that leads to the MIT occurs through the change of a topological invariant of the system, its Luttinger volume. In fact, exactly at the MIT, we obtain a fractional excess charge contributed to the conduction bath by the impurity; it is plausible that this fractional charge corresponds to the state that is localised in the SSH chain near the physical lattice site as obtained by Sen et al. We show that this fractional charge has drastic consequences for the low-lying excitations: the quasiparticle residue for the local Fermi liquid vanishes at the MIT, resulting in the emergence of non-Fermi liquid excitations. Several exotic properties of the non-Fermi liquid have been described in our work.
+\item
+	{\it Is there a unifying universal model for the Mott MIT, that explains all these phenomena? Does this model shed light on the competing interactions that give rise to the MIT?}
+\par
+We show in our work that there is in fact such a universal model: it involves the competition between Kondo spin-flip physics \(J\) and local charge correlation in the bath zeroth site (bath site coupled to the impurity spin) \(\left( \sim U_b\hat n_{0 \uparrow}n_{0 \downarrow} \right) \). We explain much of the phenomenology of DMFT, including the gapping of the spectral function, the appearance of a preformed gap, the presence of a coexistence region, and the presence of critical signatures in various parts of the phase diagram, among other things. Our universal model suggests that pairing correlations away from the impurity site lead to the frustration of the Kondo screening effect, and ultimately its destruction.
+\end{itemize}
+
+\bibliography{NJP-response}
+
+\end{document}
